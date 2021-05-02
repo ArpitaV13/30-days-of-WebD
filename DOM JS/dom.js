@@ -67,4 +67,68 @@ var even=document.querySelectorAll("li:nth-child(even)");
 	for(var i=0;i<even.length;i++){
 		even[i].style.backgroundColor="#ccc"
 	}
+// Part 2 parent and siblings
+
+var itemList=document.querySelector('#items');
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor="#f4f4f4";
+
+// console.log(itemList.parentNode.parentNode);
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+// //parentElement is the same 
+// console.log(itemList.parentElement);
+// itemList.parentNode.style.backgroundColor="#f4f4f4";
+
+// //child nodes
+// console.log(itemList.childNodes);
+
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor="yellow";
+
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent="Hello !";// similarly lastElementChild
+
+// siblings
+// console.log(itemList.nextSibling);// gives the text node
+// console.log(itemList.nextElementSibling);
+// console.log(itemList.previousSibling);
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color="green";
+
+
+// create elenments
+
+// craete a div
+
+var newDiv=document.createElement('div');
+//add a class
+newDiv.className='hello';
+
+// add a id
+newDiv.id="hello1";
+
+// add attribute
+newDiv.setAttribute('title','Hello Div');
+
+
+//create a text node
+
+var newDivText=document.createTextNode('Hello World!');
+
+newDiv.appendChild(newDivText);
+
+
+
+//insert into DOM
+
+var container=document.querySelector("header .container");
+var h1=document.querySelector('header h1');
+
+
+console.log(newDiv);
+
+newDiv.style.fontSize="30px";
+container.insertBefore(newDiv, h1);
 
